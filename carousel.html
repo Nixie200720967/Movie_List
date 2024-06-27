@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Example</title>
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <h2>Melanjutkan Tonton Film</h2>
+        <div class="carousel">
+            <button class="carousel-button left" id="prevBtn">&#9664;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <img src="assets/1-DontLookUp.png" alt="Don't Look Up">
+                        <p>Don't Look Up <span class="rating">⭐ 4.5/5</span></p>
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="assets/2-TheBatman.png" alt="The Batman">
+                        <p>The Batman <span class="rating">⭐ 4.2/5</span></p>
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="assets/3-Bluelock.png" alt="Blue Lock">
+                        <p>Blue Lock <span class="rating">⭐ 4.6/5</span></p>
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="assets/4-Otto.png" alt="A Man Called Otto">
+                        <p>A Man Called Otto <span class="rating">⭐ 4.4/5</span></p>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-button right" id="nextBtn">&#9654;</button>
+        </div>
+    </div>
+
+    <script src="carousel.js"></script>
+</body>
+</html>

@@ -18,8 +18,6 @@ nav {
 .nav-container {
     display: flex;
     align-items: center;
-    /* width: 1440px;
-    height: 94px; */
     padding: 25px 80px;
     justify-content: space-between;
     opacity: 1;
