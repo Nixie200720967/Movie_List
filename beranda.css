@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:  #181a1c;
+    background-color: #181a1c;
 }
 
 header {
@@ -249,12 +249,147 @@ li a.active {
     background-color: #181A1C;
 }
 
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 250px;
+    margin: 0 10px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+.rating-content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 10px;
+    margin-top: -55px;
+}
+
+.rating {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+
 .lanjut-nonton {
     text-align: left;
     font-family: Lato;
-    font-size: 32px;
+    /* font-size: 32px;
     font-weight: 700;
-    line-height: 35.2px;
-  
+    line-height: 35.2px; */
 
+}
+
+.img1 {
+    width: 302px;
+    height: 162px;
+
+}
+
+footer {
+    padding: 20px 0;
+    width: 1280px;
+    height: 284px;
+    top: 2606px;
+    padding: 60px 80px 60px 80px;
+    gap: 20px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: left;
+}
+
+
+
+.container-footer-main {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.chil-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex: 1;
+    text-align: left;
+}
+
+.chil-footer img {
+
+    height: auto;
+    width: 109px;
+
+gap: 0px;
+opacity: 0px;
+
+}
+
+.chil-footer p {
+    margin: 10px 0 0 0;
+}
+
+.information-footer{
+
+}
+
+.genre-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.genre-list li {
+    padding: 4px 0; /* Add space between items */
 }

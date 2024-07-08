@@ -15,23 +15,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    const navbar = document.getElementById('navbar');
-    const links = navbar.getElementsByTagName('a');
-
-    for (let i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', function() {
-            const current = document.getElementsByClassName('active');
-
-            if (current.length > 0) {
-                current[0].classList.remove('active');
-            }
-
-            this.classList.add('active');
-        });
-    }
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const profileIcon = document.querySelector('.profile-icon');
     const dropdown = document.querySelector('.dropdown');
@@ -47,22 +30,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 $(document).ready(function() {
-    // When hovering over profile icon, show dropdown
     $('.profile-icon').hover(function() {
         $('.dropdown').css('display', 'block');
     }, function() {
         $('.dropdown').css('display', 'none');
     });
 
-    // Allow clicking on dropdown links
     $('.dropdown a').click(function() {
-        // Handle link click functionality here
-        // Example: redirect to link href
         window.location.href = $(this).attr('href');
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = carousel.querySelector('.nextBtn');
+        const prevButton = carousel.querySelector('.prevBtn');
+        const slideWidth = slides[0].getBoundingClientRect().width;
 
+        const setSlidePosition = (slide, index) => {
+            slide.style.left = slideWidth * index + 'px';
+        };
+        slides.forEach(setSlidePosition);
 
+        const moveToSlide = (track, currentSlide, targetSlide) => {
+            track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+            currentSlide.classList.remove('current-slide');
+            targetSlide.classList.add('current-slide');
+        };
+
+        prevButton.addEventListener('click', e => {
+            const currentSlide = track.querySelector('.current-slide');
+            const prevSlide = currentSlide.previousElementSibling;
+            if (prevSlide) {
+                moveToSlide(track, currentSlide, prevSlide);
+            }
+        });
+
+        nextButton.addEventListener('click', e => {
+            const currentSlide = track.querySelector('.current-slide');
+            const nextSlide = currentSlide.nextElementSibling;
+            if (nextSlide) {
+                moveToSlide(track, currentSlide, nextSlide);
+            }
+        });
+    });
+});
