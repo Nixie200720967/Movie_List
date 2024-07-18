@@ -3,47 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Example</title>
-    <link rel="stylesheet" href="tes.css">
+    <title>Top Rating Film and Series</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Other content of your website -->
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="logo.png" alt="Chill Logo">
-                <p>@2023 Chill All Rights Reserved.</p>
-            </div>
-            <div class="footer-genre">
-                <h4>Genre</h4>
-                <ul>
-                    <li>Aksi</li>
-                    <li>Anak-anak</li>
-                    <li>Anime</li>
-                    <li>Britania</li>
-                    <li>Drama</li>
-                    <li>Fantasi Ilmiah & Fantasi</li>
-                    <li>Kejahatan</li>
-                    <li>KDrama</li>
-                    <li>Komedi</li>
-                    <li>Petualangan</li>
-                    <li>Perang</li>
-                    <li>Romantis</li>
-                    <li>Sains & Alam</li>
-                    <li>Thriller</li>
+    <div class="carousel-container">
+        <h2>Top Rating Film dan Series Hari ini</h2>
+        <div class="carousel">
+            <button class="carousel-button left">&lt;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide">
+                        <img src="path/to/suzume.jpg" alt="Suzume">
+                        <p>Episode Baru</p>
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="path/to/jurassic_world.jpg" alt="Jurassic World">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="path/to/sonic.jpg" alt="Sonic the Hedgehog">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="path/to/all_of_us_are_dead.jpg" alt="All of Us Are Dead">
+                        <p>16 Episode</p>
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="path/to/big_hero_6.jpg" alt="Big Hero 6">
+                    </li>
                 </ul>
             </div>
-            <div class="footer-help">
-                <h4>Bantuan</h4>
-                <ul>
-                    <li>FAQ</li>
-                    <li>Kontak Kami</li>
-                    <li>Privasi</li>
-                    <li>Syarat & Ketentuan</li>
-                </ul>
-            </div>
+            <button class="carousel-button right">&gt;</button>
         </div>
-    </footer>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>

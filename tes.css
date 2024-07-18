@@ -1,56 +1,72 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-}
-
-footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
+.carousel-container {
     width: 80%;
-    max-width: 1200px;
+    overflow: hidden;
 }
 
-.footer-logo,
-.footer-genre,
-.footer-help {
-    flex: 1;
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.footer-logo img {
-    width: 50px;
-    height: auto;
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
 }
 
-.footer-logo p {
-    margin: 10px 0 0 0;
-}
-
-.footer-genre h4,
-.footer-help h4 {
-    margin-bottom: 10px;
-}
-
-.footer-genre ul,
-.footer-help ul {
-    list-style-type: none;
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.footer-genre li,
-.footer-help li {
-    margin: 5px 0;
+.carousel-slide {
+    min-width: 20%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
-.footer-genre li:hover,
-.footer-help li:hover {
-    text-decoration: underline;
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
     cursor: pointer;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
