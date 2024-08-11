@@ -116,3 +116,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// Function to close the pop-up
+function closePopup() {
+    document.querySelector('.outer-container').style.display = 'none';
+    document.querySelector('.background').style.display = 'none';
+}
+
+function openPopup() {
+    document.querySelector('.background').style.display = 'flex';
+    document.querySelector('.background').style.position = 'fixed';
+    document.querySelector('.outer-container').style.display = 'block';
+
+}

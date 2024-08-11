@@ -15,23 +15,21 @@
     <script src="2_2_beranda.js"></script>
     <script src="Test/carousel.js"></script>
     <script src="4_Halaman_Series_Genre.js"></script>
-    <script src="5_genre_pop_up.css"></script>
+    <script src="5_genre_pop_up.js"></script>
 </head>
 
 <body>
     <div class="background">
 
-        <div class="outer-container">
-
-        
-
+        <div id="outer-container" class="outer-container">
         <div class="appear_detail">
             <img class="tedlasso" src="assets/img/ted_laso.png">
             <div class="container-bottom">
                 <div class="close">
-                    <button>
-                        X
-                    </button>
+                    <button onclick="closePopup()">X</button>
+
+                    
+
                 </div>
                 <div class="tittle">Ted Lasso</div>
                 <div class="action-buttons-pop-up">
@@ -264,7 +262,7 @@
             <div class="carousel-track-container">
                 <ul class="carousel-track">
                     <li class="carousel-slide current-slide">
-                        <img class="img1" src="assets/1-DontLookUp.png" alt="Don't Look Up">
+                        <img class="img1" src="assets/1-DontLookUp.png" alt="Don't Look Up" onclick="openPopup()">
                         <div class="rating-content">
                             <p>Don't Look Up</p>
                             <p>⭐ 4.5/5</p>
