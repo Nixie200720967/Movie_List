@@ -1,5 +1,7 @@
 
 
+
+
 function togglePasswordVisibility() {
     var passwordInput = document.getElementById("password");
     var toggleIcon = document.querySelector(".toggle-password");
